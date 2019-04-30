@@ -12,8 +12,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooks");
-mongoose.connect(mongoURL, {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooks")
   .then(() => {
     console.log("🗄 ==> Successfully connected to mongoDB.");
   })
